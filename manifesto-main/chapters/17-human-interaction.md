@@ -121,7 +121,7 @@ To support this new paradigm, developers need tools for authoring and organizing
 
 The following prototype shows an example of a tool for authoring and testing requirements.
 
-![Requirements Studio](/images/requirements-studio-prototype.png)
+![Requirements Studio](./images/requirements-studio-prototype.png)
 
 ### :thought_balloon: Opportunities for User Research
 * How might we support developers in building useful mental models to work effectively with generative computing? What resources are needed?
