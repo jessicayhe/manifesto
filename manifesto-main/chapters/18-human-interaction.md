@@ -2,7 +2,7 @@
 
 ---
 
-# Chapter 17: Human Interaction in Generative Systems
+# Chapter 18: Human Interaction in Generative Systems
 
 **Status:** Draft
 **Version:** 0.1
@@ -23,7 +23,7 @@ How do developers understand, interact with, and maintain agency in systems buil
 
 Generative computing introduces a new interaction paradigm. Developers rely less on brittle prompt engineering; instead, they provide intent as Meanings and shape system behavior through requirements, validation, policies, and explicit decision logic over a probabilistic system whose execution is structured through Thought sequences, grammar constraints, and IVR loops. This shift does not eliminate the need for human understanding and control—on the contrary, it amplifies it. With this new interaction paradigm comes the need for new forms of transparency, specification, intervention, and mental models for working effectively with programmable yet probabilistic systems.
 
-## 17.1 Transparency
+## 18.1 Transparency
 
 ### Novel Forms of Transparency
 
@@ -77,7 +77,7 @@ This type of structured transparency can also support the novel information need
 
 During early adoption, generative computing introduces unfamiliar abstractions, such as Thought pipelines and IVR loops, that developers must become familiar with in order to trust. Inspecting traces for these abstractions allows them to gauge whether requests are interpreted correctly, tasks are decomposed sensibly, and results are grounded. As trust stabilizes, the need for inspection may decrease, but this transparency is critical during the initial understanding phase.
 
-Novel information needs also arise in failure cases as developers must diagnose where and why breakdowns occur. Developers need visibility into Thought selection, validation outcomes (i.e., which requirements failed), IVR behavior (e.g., number of attempts and repair success), and degradation paths (§8.2.7). Yet many generative abstractions obscure this information—for example, m.instruct() and IVR loops (§7.3) collapse multiple attempts and repairs into a single output. Without access to intermediate steps, debugging becomes guesswork. The example in §17.1 concretizes how this information can be surfaced to developers.
+Novel information needs also arise in failure cases as developers must diagnose where and why breakdowns occur. Developers need visibility into Thought selection, validation outcomes (i.e., which requirements failed), IVR behavior (e.g., number of attempts and repair success), and degradation paths (§8.2.7). Yet many generative abstractions obscure this information—for example, m.instruct() and IVR loops (§7.3) collapse multiple attempts and repairs into a single output. Without access to intermediate steps, debugging becomes guesswork. The example in §18.1 concretizes how this information can be surfaced to developers.
 
 To prevent information overload, transparency can be surfaced through a dual interaction model: a default mode, where abstraction and encapsulation hold, and an inspect mode, where traces, validation results, and decision records (§9.4) are exposed.
 
@@ -86,7 +86,7 @@ To prevent information overload, transparency can be surfaced through a dual int
 * How should this information be surfaced in a way that is actionable, unobtrusive, and tailored to a user's knowledge?
 * How can we scale inspection to long-running pipelines or high-traffic production?
 
-## 17.2 Human Intervention
+## 18.2 Human Intervention
 
 Human intervention in generative computing serves three important purposes: recovery from failures that automated repair cannot resolve, clarity on decisions where automated signals are uncertain, and developer engagement with any faulty artifacts that they might otherwise accept without scrutiny.
 
@@ -107,7 +107,7 @@ Together, these patterns reposition human involvement as active participation, w
 * How does delegation evolve as trust evolves? How can the system support dynamic policies to reflect evolving user needs?
 * What are the social dynamics of human-in-the-loop intervention in teams? For example, are there individual differences in decision-making, and how can we preserve context between team members?
 
-## 17.3 Specification
+## 18.3 Specification
 
 ### Novel Specification Needs
 
@@ -115,7 +115,7 @@ Generative computing introduces a new form of specification that sits between co
 
 Generative computing sits between these paradigms: programs are structured via Thoughts, scopes, requirements, but execute on a stochastic engine; failures are localizable (decision records, IVR outcomes) but rarely reduce to a single line of code. This shift poses both opportunities and challenges, and it requires a corresponding shift in mental models.
 
-Requirements (§7.3) are one of the most visible components of this specification, and they exemplify a new mental model that developers must adapt to. Requirements serve as both an instruction to the generator and a contract with the validator that consumes it. A requirement worded for clarity to the generator may be hard for an LLM judge to evaluate; a requirement worded for evaluability may bias the generator. This dual obligation is a core difficulty of specification in generative computing, and bridging it requires inspection (§17.1) as the operational complement to specification — a developer who cannot see how a requirement is interpreted by both sides cannot iterate on it effectively. Furthermore, requirements may interact in non-obvious ways. Changing the order of requirements can influence outputs, and specifying multiple constraints can lead to trade-offs that the system must resolve. Detecting which requirement failed and why is not always straightforward, particularly when validation involves LLM-based checks.
+Requirements (§7.3) are one of the most visible components of this specification, and they exemplify a new mental model that developers must adapt to. Requirements serve as both an instruction to the generator and a contract with the validator that consumes it. A requirement worded for clarity to the generator may be hard for an LLM judge to evaluate; a requirement worded for evaluability may bias the generator. This dual obligation is a core difficulty of specification in generative computing, and bridging it requires inspection (§18.1) as the operational complement to specification — a developer who cannot see how a requirement is interpreted by both sides cannot iterate on it effectively. Furthermore, requirements may interact in non-obvious ways. Changing the order of requirements can influence outputs, and specifying multiple constraints can lead to trade-offs that the system must resolve. Detecting which requirement failed and why is not always straightforward, particularly when validation involves LLM-based checks.
 
 To support this new paradigm, developers need tools for authoring and organizing requirements, testing them across representative inputs, identifying trade-offs and failures, and iterating on constraints.
 
@@ -127,7 +127,7 @@ The following prototype shows an example of a tool for authoring and testing req
 * How might we support developers in building useful mental models to work effectively with generative computing? What resources are needed?
 * What are developers' preferred workflows for defining and refining requirements, and how might we design tooling to support their needs?
 
-## 17.4 Generative Computing in Practice
+## 18.4 Generative Computing in Practice
 
 Lastly, we outline practical considerations for supporting the adoption of generative computing into user workflows.
 
