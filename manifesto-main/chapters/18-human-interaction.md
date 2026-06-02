@@ -123,6 +123,8 @@ The following prototype shows an example of a tool for authoring and testing req
 
 ![Requirements Studio](./images/requirements-studio-prototype.png)
 
+*Created with Figma Make*
+
 ### :thought_balloon: Opportunities for User Research
 * How might we support developers in building useful mental models to work effectively with generative computing? What resources are needed?
 * What are developers' preferred workflows for defining and refining requirements, and how might we design tooling to support their needs?
