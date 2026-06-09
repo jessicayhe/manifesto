@@ -4,11 +4,11 @@
 
 # Chapter 18: Human Interaction in Generative Systems
 
-**Status:** Draft
-**Version:** 0.1
-**Authors:** Jessica He, Kush Varshney, Claude
-**Date Created:** 2026-05-20
-**Date Modified:** 2026-06-01
+**Status:** Draft<br>
+**Version:** 0.1<br>
+**Authors:** Jessica He, Kush Varshney, Claude<br>
+**Date Created:** 2026-05-20<br>
+**Date Modified:** 2026-06-08
 
 **Prerequisites:** Chapter 7 (Mellea Standard Library — IVR, encapsulation), Chapter 8 (Meaning and Thought), Chapter 9 (Decision Architecture), Chapter 12 (Unification, Traces, and Synthetic Data), Chapter 14 (Software-Defined Models), Chapter 15 (Security Across the Stack)
 
@@ -129,7 +129,7 @@ The following prototype shows an example of a tool for authoring and testing req
 
 The preceeding sections assume that developers will write Mellea programs directly, but whether this assumption holds remains an open question. In practice, Mellea may occupy a level of abstraction similar to bytecode. Just as most developers work in higher-level languages that compile down to bytecode, they may also author Mellea programs through higher-level formats, such as natural language specification, rather than engaging with Mellea directly.
 
-The Mellea Skills Compiler operationalizes this alternative means of specification by taking a natural-language skill specification and compiling it into a typed Mellea pipeline package, complete with Pydantic schemas, generative slots, requirement validators, and orchestration code, all without requiring the developer to engage directly with Mellea abstractions. Furthermore, contradictions in the source specification are surfaced as testable failures rather than silently resolved, making the compilation step itself a form of structured analysis of the developer's intent. In this interaction paradigm, Mellea becomes an intermediate artifact that governs execution but is no longer the primary input nor output inspected by the developer.
+The [Mellea Skills Compiler](https://github.com/generative-computing/mellea-skills-compiler) operationalizes this alternative means of specification by taking a natural-language skill specification and compiling it into a typed Mellea pipeline package, complete with Pydantic schemas, generative slots, requirement validators, and orchestration code, all without requiring the developer to engage directly with Mellea abstractions. Furthermore, contradictions in the source specification are surfaced as testable failures rather than silently resolved, making the compilation step itself a form of structured analysis of the developer's intent. In this interaction paradigm, Mellea becomes an intermediate artifact that governs execution but is no longer the primary input nor output inspected by the developer.
 
 In this interaction paradigm, the question becomes how to design natural language compilers or visual authoring tools (see prototype above) that convey useful mental models of the underlying architecture to enable developers generate and modify Mellea programs without exposing the full language surface. This interaction paradigm raises additional developer needs and considerations. If most developers never read the Mellea programs that govern their pipelines, the transparency and debuggability properties described in §18.1 and §18.2 become harder to exercise, as developers cannot inspect a trace that they do not have the vocabulary to interpret. One artifact that can help address this gap is the mapping report produced by the Skills Compiler, which provides a human-readable rendering that links each compiled artifact back to the original natural-language spec. Another approach is to preserve the natural-language spec as a first-class artifact alongside the generated program, so that version control, auditing, and diffing can operate at a level understood by the developer.
 
